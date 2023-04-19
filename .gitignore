@@ -37,3 +37,5 @@ lerna-debug.log*
 .idea
 
 conf/applicationdev.yml
+
+pnpm-lock.yaml
