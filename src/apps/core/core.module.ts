@@ -3,13 +3,13 @@ import { DatabaseModule } from '../database/database.module';
 import { fileProviders } from './core.providers';
 // import { CreateFileService } from './service/create-file.service';
 // import { FileController } from './controller/file.controller';
-import { WorkspaceController } from './controller/workspace.controller';
-import { ListWorkspaceService } from './list-workspace.service';
-// import { ListWorkspaceService } from './service/list-workspace.service';
+import { StarController } from './controller/StarController';
+import { ListstarsService } from './liststars.service';
+// import { ListstarsService } from './service/list-workspace.service';
 
 @Module({
   imports: [DatabaseModule],
-  controllers: [WorkspaceController],
-  providers: [ListWorkspaceService, ...fileProviders],
+  controllers: [StarController],
+  providers: [ListstarsService, ...fileProviders],
 })
 export class CoreModule {}

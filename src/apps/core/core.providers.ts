@@ -1,19 +1,14 @@
 // import { Connection } from 'mongoose';
 // import { FileSchema } from './schemas/file.schema';
-import { FolderSchema } from './schemas/folder.schema';
+import { StarSchema } from './schemas/star.schema';
 // import { RequestSchema } from './schemas/request.schema';
 // import { WorkspaceSchema } from './schemas/workspace.schema';
-const {
-  fileSchemaName,
-  requestSchemaName,
-  workspaceSchemaName,
-  folderSchemaName,
-} = global.conf.datasource.mongodb;
+const { starSchemaName } = global.conf.datasource.mongodb;
 export const fileProviders = [
   {
-    provide: 'MONGODB_CONNECTION_FolderRepository',
+    provide: 'MONGODB_CONNECTION_StarRepository',
     useFactory: (connection: any) =>
-      connection.model('folder_model', FolderSchema, folderSchemaName),
+      connection.model('star_model', StarSchema, starSchemaName),
     inject: ['MONGODB_CONNECTION'],
   },
 ];
