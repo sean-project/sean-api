@@ -1,15 +1,54 @@
-import { Prop, raw, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 export type StarDocument = Star & Document;
 
 @Schema()
 export class Star {
   @Prop()
-  Sex: number;
+  starID: number;
   @Prop()
-  StarAge: number;
+  starCustomTags: string;
   @Prop()
-  BirthPlace: string;
+  starName: string;
+  @Prop()
+  starAge: number;
+  @Prop()
+  starSex: string;
+  @Prop()
+  height: string;
+  @Prop()
+  weight: string;
+  @Prop()
+  birthdayDate: Date;
+  @Prop()
+  country: string;
+  @Prop()
+  birthPlace: string;
+  @Prop()
+  nation: string;
+  @Prop()
+  bloodType: string;
+  @Prop()
+  headImg: string;
+  @Prop()
+  professions: string;
+  @Prop()
+  fans: number;
+  @Prop()
+  school: string;
+  @Prop()
+  repWorks: string;
+  @Prop()
+  brokerageFirm: string;
+  @Prop()
+  describe: string;
+  @Prop()
+  wbID: string;
+  @Prop()
+  dyID: string;
+  @Prop()
+  xhsID: string;
+  @Prop()
+  bilibiliID: string;
 }
-// BirthPlace、StarAge
 export const StarSchema = SchemaFactory.createForClass(Star);
