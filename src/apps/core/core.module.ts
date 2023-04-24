@@ -5,11 +5,12 @@ import { fileProviders } from './core.providers';
 // import { FileController } from './controller/file.controller';
 import { StarController } from './controller/StarController';
 import { ListstarsService } from './liststars.service';
+import { RetrieveStarService } from './retrieve-star.service';
 // import { ListstarsService } from './service/list-workspace.service';
 
 @Module({
   imports: [DatabaseModule],
   controllers: [StarController],
-  providers: [ListstarsService, ...fileProviders],
+  providers: [ListstarsService, RetrieveStarService, ...fileProviders],
 })
 export class CoreModule {}
